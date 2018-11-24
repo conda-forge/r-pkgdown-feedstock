@@ -14,9 +14,8 @@ Summary: Generate an attractive and useful website from a source package. 'pkgdo
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-pkgdown-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-pkgdown-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-pkgdown-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-pkgdown-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-pkgdown-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-pkgdown-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-pkgdown-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-pkgdown-feedstock)
 
 Current release info
 ====================
