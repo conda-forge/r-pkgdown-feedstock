@@ -1,4 +1,4 @@
-{% set version = '1.1.0' %}
+{% set version = '1.3.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,19 +10,19 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pkgdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pkgdown/pkgdown_{{ version }}.tar.gz
-  sha256: adb5baa974f46b12f430acb3662d826c5f73851c06f7a234d2490260da102e70
+  sha256: 67bd1a027fe498390087fbc99cd17391017dd15ef619d259f4015a0b476a72ab
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 1000
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+
   host:
     - r-base
     - r-mass
@@ -31,16 +31,19 @@ requirements:
     - r-cli
     - r-crayon
     - r-desc
-    - r-devtools
     - r-digest
     - r-evaluate
+    - r-fansi
     - r-fs >=1.2.0
     - r-highlight
     - r-httr
     - r-magrittr
     - r-memoise
+    - r-openssl
+    - r-pkgload >=1.0.2
+    - r-processx
     - r-purrr
-    - r-rematch
+    - r-rematch2
     - r-rlang >=0.2.0
     - r-rmarkdown >=1.1.9007
     - r-roxygen2
@@ -48,6 +51,7 @@ requirements:
     - r-rstudioapi
     - r-tibble
     - r-whisker
+    - r-withr
     - r-xml2 >=1.1.1
     - r-yaml
   run:
@@ -58,16 +62,19 @@ requirements:
     - r-cli
     - r-crayon
     - r-desc
-    - r-devtools
     - r-digest
     - r-evaluate
+    - r-fansi
     - r-fs >=1.2.0
     - r-highlight
     - r-httr
     - r-magrittr
     - r-memoise
+    - r-openssl
+    - r-pkgload >=1.0.2
+    - r-processx
     - r-purrr
-    - r-rematch
+    - r-rematch2
     - r-rlang >=0.2.0
     - r-rmarkdown >=1.1.9007
     - r-roxygen2
@@ -75,6 +82,7 @@ requirements:
     - r-rstudioapi
     - r-tibble
     - r-whisker
+    - r-withr
     - r-xml2 >=1.1.1
     - r-yaml
 
@@ -84,19 +92,36 @@ test:
     - "\"%R%\" -e \"library('pkgdown')\""  # [win]
 
 about:
-  home: http://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
+  home: https://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
   license: MIT
-  summary: Generate an attractive and useful website from a source package. 'pkgdown' convert
-    your documentation, vignettes, 'README' and more to  'HTML' making it easy to share
+  summary: Generate an attractive and useful website from a source package. 'pkgdown' converts
+    your documentation, vignettes, 'README', and more to  'HTML' making it easy to share
     information about your package online.
   license_family: MIT
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Package: pkgdown
+# Title: Make Static HTML Documentation for a Package
+# Version: 1.3.0
+# Authors@R: c( person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre"),  comment = c(ORCID = "0000-0003-4757-117X") ), person("Jay", "Hesselberth", role = "aut",  comment = c(ORCID = "0000-0002-6299-179X") ), person("RStudio", role = c("cph", "fnd")) )
+# Description: Generate an attractive and useful website from a source package. 'pkgdown' converts your documentation, vignettes, 'README', and more to  'HTML' making it easy to share information about your package online.
+# License: MIT + file LICENSE
+# URL: https://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
+# BugReports: https://github.com/r-lib/pkgdown/issues
+# Depends: R (>= 3.1.0)
+# Imports: callr (>= 2.0.2), cli, crayon, desc, digest, evaluate, fs (>= 1.2.0), fansi, highlight, httr, magrittr, MASS, memoise, openssl, pkgload (>= 1.0.2), purrr, processx, R6, rematch2, rlang (>= 0.2.0), rmarkdown (>= 1.1.9007), roxygen2, rsconnect, rstudioapi, tibble, tools, whisker, withr, xml2 (>= 1.1.1), yaml
+# Suggests: covr, devtools, htmlwidgets, jsonlite, knitr, leaflet, testthat, rticles
+# VignetteBuilder: knitr
+# SystemRequirements: pandoc
+# RoxygenNote: 6.1.1
+# Encoding: UTF-8
+# NeedsCompilation: no
+# Packaged: 2018-12-06 21:58:07 UTC; hadley
+# Author: Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>), Jay Hesselberth [aut] (<https://orcid.org/0000-0002-6299-179X>), RStudio [cph, fnd]
+# Maintainer: Hadley Wickham <hadley@rstudio.com>
+# Repository: CRAN
+# Date/Publication: 2018-12-07 00:50:07 UTC
