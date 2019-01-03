@@ -1,13 +1,15 @@
 About r-pkgdown
 ===============
 
-Home: http://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
+Home: https://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
 
 Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Generate an attractive and useful website from a source package. 'pkgdown' convert your documentation, vignettes, 'README' and more to  'HTML' making it easy to share information about your package online.
+Summary: Generate an attractive and useful website from a source package. 'pkgdown' converts your documentation, vignettes, 'README', and more to  'HTML' making it easy to share information about your package online.
 
 
 
@@ -103,3 +105,9 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@conda-forge/r](https://github.com/conda-forge/r/)
+
