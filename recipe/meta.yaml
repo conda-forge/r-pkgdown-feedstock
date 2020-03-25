@@ -1,4 +1,4 @@
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pkgdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pkgdown/pkgdown_{{ version }}.tar.gz
-  sha256: 8ef50e9d5b2b52e7a5a49a3249583a90671e3c50c50b0899fe561780a3b615f8
+  sha256: eff0561f98027b96373dbafc6ca28c9def61afc0b0174452fd7de0651b1b230f
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -86,12 +86,11 @@ test:
 about:
   home: https://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
   license: MIT
-  summary: Generate an attractive and useful website from a source package. 'pkgdown' converts
-    your documentation, vignettes, 'README', and more to  'HTML' making it easy to share
-    information about your package online.
+  summary: Generate an attractive and useful website from a source package. 'pkgdown' converts your documentation, vignettes, 'README', and more to  'HTML' making
+    it easy to share information about your package online.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
