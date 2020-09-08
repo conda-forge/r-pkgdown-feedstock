@@ -1,4 +1,4 @@
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pkgdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pkgdown/pkgdown_{{ version }}.tar.gz
-  sha256: 0835e88f2c95ef8b0ba2e4e51673bd79a7ee4b14188251d117f0b7f51771c76b
+  sha256: 985a1fa81b63ad29389f5491483bcbf42a619394819d92e8af1f69218b518a7c
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,57 +25,47 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-mass
     - r-callr >=2.0.2
-    - r-cli
     - r-crayon
     - r-desc
     - r-digest
-    - r-evaluate
-    - r-fansi
-    - r-fs >=1.2.0
-    - r-highlight
-    - r-httr
+    - r-downlit
+    - r-fs >=1.3.0
+    - r-httr >=1.4.2
     - r-magrittr
     - r-memoise
     - r-openssl
-    - r-processx
     - r-purrr
+    - r-ragg
     - r-rematch2
     - r-rlang >=0.3.0
     - r-rmarkdown >=1.1.9007
-    - r-rstudioapi
     - r-tibble
     - r-whisker
     - r-withr
-    - r-xml2 >=1.1.1
+    - r-xml2 >=1.3.1
     - r-yaml
   run:
     - r-base
-    - r-mass
     - r-callr >=2.0.2
-    - r-cli
     - r-crayon
     - r-desc
     - r-digest
-    - r-evaluate
-    - r-fansi
-    - r-fs >=1.2.0
-    - r-highlight
-    - r-httr
+    - r-downlit
+    - r-fs >=1.3.0
+    - r-httr >=1.4.2
     - r-magrittr
     - r-memoise
     - r-openssl
-    - r-processx
     - r-purrr
+    - r-ragg
     - r-rematch2
     - r-rlang >=0.3.0
     - r-rmarkdown >=1.1.9007
-    - r-rstudioapi
     - r-tibble
     - r-whisker
     - r-withr
-    - r-xml2 >=1.1.1
+    - r-xml2 >=1.3.1
     - r-yaml
 
 test:
@@ -86,8 +76,7 @@ test:
 about:
   home: https://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
   license: MIT
-  summary: Generate an attractive and useful website from a source package. 'pkgdown' converts your documentation, vignettes, 'README', and more to  'HTML' making
-    it easy to share information about your package online.
+  summary: Generate an attractive and useful website from a source package. 'pkgdown' converts your documentation, vignettes, 'README', and more to  'HTML' making it easy to share information about your package online.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT

@@ -5,7 +5,7 @@ Home: https://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Generate an attractive and useful website from a source package. 'pkgdown' converts your documentation, vignettes, 'README', and more to  'HTML' making it easy to share information about your package online.
 
