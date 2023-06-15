@@ -1,11 +1,11 @@
-About r-pkgdown
-===============
+About r-pkgdown-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pkgdown-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pkgdown-feedstock/blob/main/LICENSE.txt)
 
 Summary: Generate an attractive and useful website from a source package. 'pkgdown' converts your documentation, vignettes, 'README', and more to  'HTML' making it easy to share information about your package online.
 
