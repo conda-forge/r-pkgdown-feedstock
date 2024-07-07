@@ -1,4 +1,4 @@
-{% set version = "2.0.9" %}
+{% set version = "2.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pkgdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pkgdown/pkgdown_{{ version }}.tar.gz
-  sha256: 6e542216c03b5286cb9901175d1a7937a664db2572bc28bb51e9000269fcdda0
+  sha256: c4d1df3b738d66e60db71e57c01c86c46f2fe58f972c9e2403c07a1436279fb4
 
 build:
   merge_build_host: true  # [win]
