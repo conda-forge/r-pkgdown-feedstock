@@ -3,11 +3,11 @@ About r-pkgdown-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pkgdown-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pkgdown.r-lib.org, https://github.com/r-lib/pkgdown
+Home: https://pkgdown.r-lib.org/, https://github.com/r-lib/pkgdown
 
 Package license: MIT
 
-Summary: Generate an attractive and useful website from a source package. 'pkgdown' converts your documentation, vignettes, 'README', and more to  'HTML' making it easy to share information about your package online.
+Summary: Generate an attractive and useful website from a source package.  'pkgdown' converts your documentation, vignettes, 'README', and more to 'HTML' making it easy to share information about your package online.
 
 Current build status
 ====================
@@ -143,5 +143,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 
