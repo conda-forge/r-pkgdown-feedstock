@@ -1,6 +1,5 @@
 {% set version = "2.1.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-pkgdown
@@ -13,8 +12,7 @@ source:
   sha256: c4d1df3b738d66e60db71e57c01c86c46f2fe58f972c9e2403c07a1436279fb4
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
