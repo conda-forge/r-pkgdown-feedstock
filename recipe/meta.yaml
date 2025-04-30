@@ -12,7 +12,7 @@ source:
   sha256: d7e9ca2150e8de0488eec5c25ab50a5028cef65668e54d9b489f43337b6995f9
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -28,16 +28,15 @@ requirements:
     - r-callr >=3.7.3
     - r-cli >=3.6.1
     - r-desc >=1.4.0
-    - r-digest
     - r-downlit >=0.4.4
     - r-fontawesome
     - r-fs >=1.4.0
-    - r-httr2 >=1.0.0
+    - r-httr2 >=1.0.2
     - r-jsonlite
     - r-openssl
     - r-purrr >=1.0.0
-    - r-ragg
-    - r-rlang >=1.1.0
+    - r-ragg >= 1.4.0
+    - r-rlang >=1.1.4
     - r-rmarkdown >=2.27
     - r-tibble
     - r-whisker
@@ -50,16 +49,15 @@ requirements:
     - r-callr >=3.7.3
     - r-cli >=3.6.1
     - r-desc >=1.4.0
-    - r-digest
     - r-downlit >=0.4.4
     - r-fontawesome
     - r-fs >=1.4.0
-    - r-httr2 >=1.0.0
+    - r-httr2 >=1.0.2
     - r-jsonlite
     - r-openssl
     - r-purrr >=1.0.0
-    - r-ragg
-    - r-rlang >=1.1.0
+    - r-ragg >= 1.4.0
+    - r-rlang >=1.1.4
     - r-rmarkdown >=2.27
     - r-tibble
     - r-whisker
